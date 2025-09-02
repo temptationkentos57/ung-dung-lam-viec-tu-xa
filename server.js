@@ -10,17 +10,17 @@ const io = socketIo(server);
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Ứng dụng Làm Việc Từ Xa!');
+  res.send('Remote Work Application!');
 });
 
 io.on('connection', (socket) => {
-  console.log('Người dùng mới kết nối: ' + socket.id);
+  console.log('User connected: ' + socket.id);
   socket.on('disconnect', () => {
-    console.log('Người dùng đã ngắt kết nối: ' + socket.id);
+    console.log('User disconnected: ' + socket.id);
   });
 });
 
 const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {
-  console.log(`Máy chủ đang chạy trên cổng ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
