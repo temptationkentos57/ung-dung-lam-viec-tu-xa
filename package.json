@@ -1,7 +1,7 @@
 {
   "name": "ung-dung-lam-viec-tu-xa",
   "version": "1.0.0",
-  "description": "Application facilitating remote work in Vietnam",
+  "description": "Application for facilitating remote work in Vietnam",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
