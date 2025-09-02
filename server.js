@@ -13,14 +13,14 @@ app.get('/', (req, res) => {
   res.send('Remote Work Application!');
 });
 
-io.on('connection', (socket) => {  // Fixed reference from 'ium' to 'io'
+io.on('connection', (socket) => {  // Handling user connection event
   console.log('User connected: ' + socket.id);
   socket.on('disconnect', () => {
     console.log('User disconnected: ' + socket.id);
   });
 });
 
-const PORT = process.env.PORT || 5000;  // Updated default port from 4000 to 5000
+const PORT = process.env.PORT || 5000;  // Default port set to 5000
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
