@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   res.send('Remote Work Application!');
 });
 
-ium.on('connection', (socket) => {
+io.on('connection', (socket) => {  // Fixed reference from 'ium' to 'io'
   console.log('User connected: ' + socket.id);
   socket.on('disconnect', () => {
     console.log('User disconnected: ' + socket.id);
