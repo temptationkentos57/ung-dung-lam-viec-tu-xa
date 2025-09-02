@@ -1,7 +1,7 @@
 {
   "name": "ung-dung-lam-viec-tu-xa",
   "version": "1.0.0",
-  "description": "Ứng dụng hỗ trợ làm việc từ xa tại Việt Nam",
+  "description": "Application supporting remote work in Vietnam",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
